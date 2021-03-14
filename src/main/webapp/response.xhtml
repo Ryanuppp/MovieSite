@@ -1,0 +1,29 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c ="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+>
+    <h:body>
+
+        <div class = "list-result">
+            <div class = "row">
+                <c:forEach var="item" items="#{Movier.list}" varStatus="i">
+                    <h:outputText value="#{item.id}"/><br/>
+                    <h:outputText value="#{item.name}"/><br/>
+                    <h:outputText value="#{item.category}"/><br/>
+                    <h:outputText value="#{item.text}"/><br/>
+                    <h:outputText value="#{item.img_path}"/><br/>
+                </c:forEach>
+            </div>
+        </div>
+        <h:outputText value = "category is"/>
+
+
+
+    </h:body>
+</html>
