@@ -6,6 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
           <factory-entry name="movieManagerPU" value="ebb9a4a5-9978-4a53-8ed1-e38cc7486b5b" />
+          <factory-entry name="movieSite" />
           <factory-entry name="myTest" />
           <factory-entry name="myapp" value="ebb9a4a5-9978-4a53-8ed1-e38cc7486b5b" />
         </datasource-mapping>

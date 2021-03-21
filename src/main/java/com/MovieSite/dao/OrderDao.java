@@ -9,7 +9,7 @@ import java.util.List;
 public interface OrderDao {
 
 
-    @Select(value = "select * from order;")
+    @Select(value = "select * from orders;")
     @Results(id = "BaseOrder",
             value = {
                     @Result(id = true,column = "id",property = "id",jdbcType = JdbcType.INTEGER),
@@ -25,7 +25,7 @@ public interface OrderDao {
     )
     List<Order> findAll();
 
-    @Select(value = "select * from order where id = #{id};")
+    @Select(value = "select * from orders where id = #{id};")
     @ResultMap("BaseOrder")
     Order findByID(int id);
 
@@ -42,6 +42,6 @@ public interface OrderDao {
     @Delete("delete from orders where id = #{id}")
     void deleteOrder(int id);
 
-    @Update("update orders set(movieName, seat, date, time, cinema, hall, price) values(#{movieName}, #{seat}, #{date}, #{time}, #{cinema}, #{hall}, #{price}) where id = #{id})")
+    @Update("update orders set movieName = #{movieName}, seat =#{seat}, date=#{date}, time=#{time}, cinema=#{cinema}, hall=#{hall}, price=#{price} where id = #{id}")
     void updateOrder(Order order);
 }
